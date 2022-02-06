@@ -1,0 +1,6 @@
+{
+  // stop the relative import madness
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
