@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport ViewRequests from 'components/pages/requests/ViewRequests';\nexport default function ViewRequestsPage() {\n  return /*#__PURE__*/_jsx(ViewRequests, {});\n}","map":null,"metadata":{},"sourceType":"module"}

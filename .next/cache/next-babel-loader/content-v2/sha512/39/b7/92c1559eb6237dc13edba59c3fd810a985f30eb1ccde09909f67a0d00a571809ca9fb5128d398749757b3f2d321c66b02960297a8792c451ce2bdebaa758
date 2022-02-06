@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { CreateOffer } from 'components/pages/offers/CreateOffer';\nexport default function CreateOfferPage() {\n  return /*#__PURE__*/_jsx(CreateOffer, {});\n}","map":null,"metadata":{},"sourceType":"module"}

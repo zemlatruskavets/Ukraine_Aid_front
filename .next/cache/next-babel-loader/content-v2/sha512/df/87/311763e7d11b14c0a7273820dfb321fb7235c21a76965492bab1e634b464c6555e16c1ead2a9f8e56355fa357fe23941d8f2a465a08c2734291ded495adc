@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport CreateRequest from 'components/pages/requests/CreateRequest';\nexport default function CreateRequestPage() {\n  return /*#__PURE__*/_jsx(CreateRequest, {});\n}","map":null,"metadata":{},"sourceType":"module"}

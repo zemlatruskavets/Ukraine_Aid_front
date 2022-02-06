@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport CreateReport from 'components/pages/reports/CreateReport';\nexport default function createReport() {\n  return /*#__PURE__*/_jsx(CreateReport, {});\n}","map":null,"metadata":{},"sourceType":"module"}
