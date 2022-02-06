@@ -25,7 +25,7 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-const requestPage = ({ query }) => {
+export default requestPage({ query }) {
   // get the request
   const { data, loading, error } = useQuery(SINGLE_REQUEST_QUERY, {
     variables: {
@@ -97,7 +97,6 @@ const requestPage = ({ query }) => {
   );
 };
 
-export default requestPage;
 
 // // this tells next to pre-render these pages at build
 // export function getStaticProps({ params: { query } }) {
