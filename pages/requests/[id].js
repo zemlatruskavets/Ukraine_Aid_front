@@ -25,7 +25,7 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-export default requestPage({ query }) {
+export default requestPage(query) {
   // get the request
   const { data, loading, error } = useQuery(SINGLE_REQUEST_QUERY, {
     variables: {
