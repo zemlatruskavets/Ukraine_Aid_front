@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { ModalStyles } from 'styles/components/Modal';
 
-// import CreateTransaction from 'components/multiple/forms/general/returnForm';
+import CreateTransaction from 'components/multiple/forms/general/returnForm';
 
 // import initial state object
 import { AccountFields } from 'data/stateFields';
@@ -28,12 +28,12 @@ export default function CreateNewAccount() {
       onRequestClose={() => router.back()}
       contentLabel="Account modal"
       style={ModalStyles}>
-      {/* <CreateTransaction
+      <CreateTransaction
         type="Account"
         stateFields={AccountFields}
         mutationString={CREATE_NEW_ACCOUNT}
         queryString={ALL_REQUESTS_QUERY}
-      /> */}
+      />
     </Modal>
   );
 }
