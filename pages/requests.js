@@ -61,9 +61,7 @@ export default function RequestsOverview() {
       <TabPanel>
         <ViewRequests />
       </TabPanel>
-      <TabPanel>
-        <ViewIndividualRequests id={user?.id} />
-      </TabPanel>
+      <TabPanel>{/* <ViewIndividualRequests id={user?.id} /> */}</TabPanel>
       <TabPanel>
         <CreateRequest />
       </TabPanel>
