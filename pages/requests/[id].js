@@ -96,23 +96,3 @@ export default function requestPage(query) {
     </Modal>
   );
 }
-
-// // this tells next to pre-render these pages at build
-// export function getStaticProps({ params: { query } }) {
-//   console.log('####');
-//   console.log(query);
-//   return { props: { query } };
-// }
-
-// // this allows next to figure out how many paths to pre-render
-// const data = ['1', '2', '3', '4'];
-// export function getStaticPaths() {
-//   return {
-//     paths: data.map((query) => ({
-//       params: {
-//         id: query.toString(),
-//       },
-//     })),
-//     fallback: false,
-//   };
-// }
