@@ -30,15 +30,6 @@ import useForm from 'lib/useForm';
 // style imports
 import { MainGrid, Form } from 'styles/components/Form';
 
-import {
-  PersonForm,
-  HostingForm,
-  TransportationForm,
-  TravelForm,
-  LivingForm,
-  WarCrimesForm,
-} from '../offers/allForms';
-
 // take in the data from the form and then apply the mutation
 export default function CreateTransaction({
   type,
@@ -72,51 +63,6 @@ export default function CreateTransaction({
   if (type === 'Account') {
     formType = (
       <PersonForm
-        loading={loading}
-        inputs={inputs}
-        handleChange={handleChange}
-        handleDateChange={handleDateChange}
-      />
-    );
-  } else if (type === 'Hosting') {
-    formType = (
-      <HostingForm
-        loading={loading}
-        inputs={inputs}
-        handleChange={handleChange}
-        handleDateChange={handleDateChange}
-      />
-    );
-  } else if (type === 'Transport') {
-    formType = (
-      <TransportationForm
-        loading={loading}
-        inputs={inputs}
-        handleChange={handleChange}
-        handleDateChange={handleDateChange}
-      />
-    );
-  } else if (type === 'transportationExpenses') {
-    formType = (
-      <TravelForm
-        loading={loading}
-        inputs={inputs}
-        handleChange={handleChange}
-        handleDateChange={handleDateChange}
-      />
-    );
-  } else if (type === 'hostingExpenses') {
-    formType = (
-      <LivingForm
-        loading={loading}
-        inputs={inputs}
-        handleChange={handleChange}
-        handleDateChange={handleDateChange}
-      />
-    );
-  } else if (type === 'warCrimes') {
-    formType = (
-      <WarCrimesForm
         loading={loading}
         inputs={inputs}
         handleChange={handleChange}
