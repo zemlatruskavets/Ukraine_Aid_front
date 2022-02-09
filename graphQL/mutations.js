@@ -297,6 +297,20 @@ const MULTIPLE_CREATION = gql`
   }
 `;
 
+const CREATE_NEW_ACCOUNT = gql`
+  mutation CREATE_NEW_ACCOUNT(
+    $email: String!
+    $name: String!
+    $password: String!
+  ) {
+    createUser(data: { email: $email, name: $name, password: $password }) {
+      id
+      email
+      name
+    }
+  }
+`;
+
 export {
   UPDATE_ACCOUNT,
   SIGNIN_MUTATION,
@@ -308,4 +322,5 @@ export {
   CREATE_TRANSPORT_OFFER,
   CREATE_HOSTING_OFFER,
   CREATE_WAR_CRIMES_REPORT,
+  CREATE_NEW_ACCOUNT,
 };
