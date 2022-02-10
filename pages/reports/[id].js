@@ -25,7 +25,7 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-export default function reportPage(query) {
+export default function reportPage({ query }) {
   // get the report
   const { data, loading, error } = useQuery(USER_REPORTS_QUERY, {
     variables: {

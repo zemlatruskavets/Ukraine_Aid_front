@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
 import DisplayError from 'components/general/ErrorMessage';
 
-import { SINGLE_OFFER_QUERY } from 'graphQ/offers/queries';
+import { SINGLE_OFFER_QUERY } from 'graphQL/offers/queries';
 import { UploadPreview } from 'components/single/Images';
 
 import { RedButton, SingleButton } from 'components/single/Buttons';
