@@ -59,7 +59,7 @@ import {
 } from 'styles/components/PublicProfile';
 
 // graphQL imports
-import { SINGLE_USER_QUERY } from 'graphQL/queries';
+import { SINGLE_USER_QUERY } from 'graphQL/accounts/queries';
 import { SingleButton } from 'components/single/Buttons';
 
 /* 
