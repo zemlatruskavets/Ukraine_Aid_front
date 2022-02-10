@@ -51,10 +51,10 @@ const NestedButton = styled.button`
     (level === 4 && '0.7rem')};
 
   width: ${({ level }) =>
-    (level === 1 && '450px') ||
-    (level === 2 && '350px') ||
-    (level === 3 && '300px') ||
-    (level === 4 && '280px')};
+    (level === 1 && '500px') ||
+    (level === 2 && '400px') ||
+    (level === 3 && '350px') ||
+    (level === 4 && '320px')};
 
   a {
     color: black;

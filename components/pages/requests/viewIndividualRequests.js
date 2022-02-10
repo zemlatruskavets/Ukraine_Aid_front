@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import Link from 'next/link';
 
-import { SINGLE_USER_REQUEST } from 'graphQL/queries';
+import { SINGLE_USER_REQUEST_AND_INFO } from 'graphQL/requests/queries';
 
 import {
   MainGrid,
@@ -11,11 +11,11 @@ import {
   AddButtonContainer,
 } from 'styles/pages/Exchange';
 import { AddPlus } from 'components/single/svgElements';
-import Row from 'components/multiple/general/Row';
+import Row from 'components/multiple/general/RequestRow';
 import { RedButton } from 'components/single/Buttons';
 
 export default function ViewIndividualRequests({ id }) {
-  const { data, error, loading } = useQuery(SINGLE_USER_REQUEST, {
+  const { data, error, loading } = useQuery(SINGLE_USER_REQUEST_AND_INFO, {
     variables: { id },
   });
 

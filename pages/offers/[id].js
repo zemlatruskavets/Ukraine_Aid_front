@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
 import DisplayError from 'components/multiple/general/ErrorMessage';
 
-import { SINGLE_REQUEST_QUERY } from 'graphQL/requests/queries';
+import { SINGLE_OFFER_QUERY } from 'graphQ/offers/queries';
 import { UploadPreview } from 'components/single/Images';
 
 import { RedButton, SingleButton } from 'components/single/Buttons';
@@ -25,9 +25,9 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-export default function requestPage(query) {
-  // get the request
-  const { data, loading, error } = useQuery(SINGLE_REQUEST_QUERY, {
+export default function offerPage(query) {
+  // get the offer
+  const { data, loading, error } = useQuery(SINGLE_OFFER_QUERY, {
     variables: {
       id: query.id,
     },
@@ -35,25 +35,29 @@ export default function requestPage(query) {
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
 
-  const { Request } = data; // get the destructured data
+  const { Offer } = data; // get the destructured data
 
   // the header
   let header;
-  if (Request.category === 'Travel') {
+  if (Offer.category === 'Transport') {
     header = (
       <h1>
-        Travel from {Request.travelOrigin} to {Request.travelDestination}
+        Travel from {Offer.travelOrigin} to {Offer.travelDestination}
       </h1>
     );
-  } else if (Request.category === 'Living') {
-    header = <h1>Living Expenses in {Request.hostLocation}</h1>;
-  } else if (Request.category === 'Other') {
-    header = <h1>Other request</h1>;
+  } else if (Offer.category === 'Hosting') {
+    header = <h1>A Place in {Offer.hostLocation}</h1>;
+  } else if (Offer.category === 'Meal') {
+    header = <h1>A Meal in {Offer.hostLocation}</h1>;
+  } else if (Offer.category === 'Equipment') {
+    header = <h1>{Offer.message}</h1>;
+  } else if (Offer.category === 'Other') {
+    header = <h1>Other offer</h1>;
   }
 
   const router = useRouter();
 
-  const lastName = Request.person.lastName.charAt(0);
+  const lastName = Offer.person.lastName.charAt(0);
 
   // useEffect(() => {
   //   router.prefetch('/');
@@ -63,17 +67,17 @@ export default function requestPage(query) {
     <Modal
       isOpen // The modal should always be shown on page load, it is the 'page'
       onRequestClose={() => router.back()}
-      contentLabel="request-modal"
+      contentLabel="offer-modal"
       style={ModalStyles}>
       <MainGrid>
         <SideBar>
           <Photo>
             <UploadPreview
-              image={Request.person?.profilePhoto?.image.publicUrlTransformed}
+              image={Offer.person?.profilePhoto?.image.publicUrlTransformed}
             />
-            {Request.person?.firstName} {lastName}.
+            {Offer.person?.firstName} {lastName}.
             <VisitProfile>
-              <Link href={`/accounts/${Request.person?.id}`}>
+              <Link href={`/accounts/${Offer.person?.id}`}>
                 <SingleButton>View Profile</SingleButton>
               </Link>
             </VisitProfile>
@@ -84,12 +88,11 @@ export default function requestPage(query) {
         <Content>
           <Title>{header}</Title>
           <Subtitle>
-            <p>{Request.numberPeople} people</p>
-            {Request.amount && <p>₴{Request.amount}</p>}
+            {Offer.numberPeople && <p>{Offer.numberPeople}</p>}
           </Subtitle>
-          <Message>{Request.message && <p>{Request.message}</p>}</Message>
+          <Message>{Offer.message && <p>{Offer.message}</p>}</Message>
           <Donate>
-            <RedButton>Donate</RedButton>
+            <RedButton>Contact</RedButton>
           </Donate>
         </Content>
       </MainGrid>

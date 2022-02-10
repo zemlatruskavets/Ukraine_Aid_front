@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
 import DisplayError from 'components/multiple/general/ErrorMessage';
 
-import { SINGLE_REQUEST_QUERY } from 'graphQL/requests/queries';
+import { USER_REPORTS_QUERY } from 'graphQL/reports/queries';
 import { UploadPreview } from 'components/single/Images';
 
 import { RedButton, SingleButton } from 'components/single/Buttons';
@@ -25,9 +25,9 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-export default function requestPage(query) {
-  // get the request
-  const { data, loading, error } = useQuery(SINGLE_REQUEST_QUERY, {
+export default function reportPage(query) {
+  // get the report
+  const { data, loading, error } = useQuery(USER_REPORTS_QUERY, {
     variables: {
       id: query.id,
     },
@@ -35,25 +35,15 @@ export default function requestPage(query) {
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
 
-  const { Request } = data; // get the destructured data
+  const { Crime } = data; // get the destructured data
 
   // the header
   let header;
-  if (Request.category === 'Travel') {
-    header = (
-      <h1>
-        Travel from {Request.travelOrigin} to {Request.travelDestination}
-      </h1>
-    );
-  } else if (Request.category === 'Living') {
-    header = <h1>Living Expenses in {Request.hostLocation}</h1>;
-  } else if (Request.category === 'Other') {
-    header = <h1>Other request</h1>;
-  }
+  header = <h1>{Crime.title}</h1>;
 
   const router = useRouter();
 
-  const lastName = Request.person.lastName.charAt(0);
+  const lastName = Crime.person.lastName.charAt(0);
 
   // useEffect(() => {
   //   router.prefetch('/');
@@ -69,11 +59,11 @@ export default function requestPage(query) {
         <SideBar>
           <Photo>
             <UploadPreview
-              image={Request.person?.profilePhoto?.image.publicUrlTransformed}
+              image={Crime.person?.profilePhoto?.image.publicUrlTransformed}
             />
-            {Request.person?.firstName} {lastName}.
+            {Crime.person?.firstName} {lastName}.
             <VisitProfile>
-              <Link href={`/accounts/${Request.person?.id}`}>
+              <Link href={`/accounts/${Crime.person?.id}`}>
                 <SingleButton>View Profile</SingleButton>
               </Link>
             </VisitProfile>
@@ -84,10 +74,10 @@ export default function requestPage(query) {
         <Content>
           <Title>{header}</Title>
           <Subtitle>
-            <p>{Request.numberPeople} people</p>
-            {Request.amount && <p>₴{Request.amount}</p>}
+            <p>{Crime.location}</p>
+            <p>{Crime.time}</p>
           </Subtitle>
-          <Message>{Request.message && <p>{Request.message}</p>}</Message>
+          <Message>{Crime.description && <p>{Crime.description}</p>}</Message>
           <Donate>
             <RedButton>Donate</RedButton>
           </Donate>

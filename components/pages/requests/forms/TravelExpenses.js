@@ -38,15 +38,15 @@ import DisplayError from 'components/multiple/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';
-import { TransportationExpensesRequestFields as StateFields } from 'data/stateFields';
+import { TransportationExpensesRequestFields as StateFields } from 'graphQL/requests/mutations';
 
 // style imports
 import 'react-datepicker/dist/react-datepicker.css';
 import { MainGrid, Form } from 'styles/components/Form';
 
 // graphQL imports
-import { CREATE_TRANSPORT_REQUEST as MUTATION_STRING } from 'graphQL/mutations';
-import { ALL_OFFERS_QUERY as REFETCH_STRING } from 'graphQL/queries';
+import { CREATE_TRANSPORT_REQUEST as MUTATION_STRING } from 'graphQL/requests/mutations';
+import { ALL_REQUESTS_QUERY as REFETCH_STRING } from 'graphQL/requests/queries';
 
 /* 
   ---------------------
@@ -75,7 +75,8 @@ export default function TravelExpensesForm() {
         onSubmit={async (e) => {
           e.preventDefault();
           await createMutation(); // submit the input fields to the backend
-          router.push('/');
+          router.push('/requests');
+          alert('Your request has been successfully added.');
           clearForm();
         }}>
         <h2>Travel Expenses Request</h2>

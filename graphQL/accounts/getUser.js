@@ -1,7 +1,9 @@
 import { useQuery } from '@apollo/client';
-import { CURRENT_USER_QUERY } from './accountQueries';
-import { ALL_USERS_QUERY } from 'graphQL/queries';
+import { ALL_USERS_QUERY, CURRENT_USER_QUERY } from './queries';
 
+/* 
+  1. authentication-related functions
+*/
 const GetUser = () => {
   const { data } = useQuery(CURRENT_USER_QUERY);
   return data?.authenticatedItem;

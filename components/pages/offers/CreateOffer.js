@@ -29,9 +29,11 @@
 import { useState } from 'react';
 
 // component imports
-import { RedButton } from 'components/single/Buttons';
+import { NestedButton } from 'components/single/Buttons';
 import TransportationOfferForm from 'components/pages/offers/forms/Transportation';
 import HostingOfferForm from 'components/pages/offers/forms/Hosting';
+import MealOfferForm from 'components/pages/offers/forms/Meals';
+import EquipmentOfferForm from 'components/pages/offers/forms/Equipment';
 
 // style imports
 import { MainGrid, TransitionDiv } from 'styles/components/Accordion';
@@ -46,9 +48,9 @@ const VisibleDiv = ({ category }) => {
       case 'transport':
         return (
           <div style={{ display: 'grid', width: '100vw' }}>
-            <RedButton onClick={() => setIsActive(!isActive)}>
+            <NestedButton level={2} onClick={() => setIsActive(!isActive)}>
               I'd like to offer transportation
-            </RedButton>
+            </NestedButton>
             <TransitionDiv open={isActive}>
               <TransportationOfferForm />
             </TransitionDiv>
@@ -57,11 +59,33 @@ const VisibleDiv = ({ category }) => {
       case 'hosting':
         return (
           <div style={{ display: 'grid', width: '100vw' }}>
-            <RedButton onClick={() => setIsActive(!isActive)}>
+            <NestedButton level={2} onClick={() => setIsActive(!isActive)}>
               I'd like to offer a place to stay
-            </RedButton>
+            </NestedButton>
             <TransitionDiv open={isActive}>
               <HostingOfferForm />
+            </TransitionDiv>
+          </div>
+        );
+      case 'meal':
+        return (
+          <div style={{ display: 'grid', width: '100vw' }}>
+            <NestedButton level={2} onClick={() => setIsActive(!isActive)}>
+              I'd like to offer a meal
+            </NestedButton>
+            <TransitionDiv open={isActive}>
+              <MealOfferForm />
+            </TransitionDiv>
+          </div>
+        );
+      case 'equipment':
+        return (
+          <div style={{ display: 'grid', width: '100vw' }}>
+            <NestedButton level={2} onClick={() => setIsActive(!isActive)}>
+              I'd like to offer some equipment
+            </NestedButton>
+            <TransitionDiv open={isActive}>
+              <EquipmentOfferForm />
             </TransitionDiv>
           </div>
         );
@@ -79,6 +103,8 @@ export default function CreateOffer() {
     <MainGrid>
       <VisibleDiv category="transport" />
       <VisibleDiv category="hosting" />
+      <VisibleDiv category="meal" />
+      <VisibleDiv category="equipment" />
     </MainGrid>
   );
 }

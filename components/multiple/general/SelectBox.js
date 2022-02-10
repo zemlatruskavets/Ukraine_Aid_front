@@ -3,7 +3,7 @@ import makeAnimated from 'react-select/animated';
 
 import { SelectStyles } from 'styles/components/SelectBox';
 
-import { GetAllUsers } from 'graphQL/getUser';
+import { GetAllUsers } from 'graphQL/accounts/getUser';
 import { DropDownImage } from 'components/single/Images';
 
 // take in the data from the form and then apply the mutation

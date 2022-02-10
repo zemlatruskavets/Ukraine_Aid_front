@@ -66,20 +66,6 @@ export default function Row({ data, person = 'pass' }) {
 
     // define what to return in each case (obviously rewrite this later wtf)
     switch (category) {
-      case 'Travel':
-        header = (
-          <h3>
-            Travel from {data.travelOrigin} to {data.travelDestination}{' '}
-          </h3>
-        );
-        second_row = <p>{data.numberPeople} people</p>;
-        third_row = <p>₴{data.amount}</p>;
-        return [header, second_row, third_row];
-      case 'Living':
-        header = <h3>Living Expenses in {data.hostLocation}</h3>;
-        second_row = <p>{data.numberPeople} people</p>;
-        third_row = <p>₴{data.amount}</p>;
-        return [header, second_row, third_row];
       case 'Hosting':
         header = <h3>A place in {data.hostLocation}</h3>;
         second_row = <p>{data.numberPeople} people</p>;
@@ -99,10 +85,10 @@ export default function Row({ data, person = 'pass' }) {
         second_row = <p>{data.numberPeople} people</p>;
         third_row = <p>{data.time}</p>;
         return [header, second_row, third_row];
-      case 'Report':
-        header = <h3>{data.title}</h3>;
-        second_row = <p>{moment(data.time).format('L')}</p>;
-        third_row = <p>{data.location}</p>;
+      case 'Meal':
+        header = <h3>A Meal in {data.hostLocation}</h3>;
+        second_row = <p>{data.numberPeople} people</p>;
+        third_row = <p>{data.time}</p>;
         return [header, second_row, third_row];
       default:
         header = <h3>Other</h3>;
@@ -117,7 +103,7 @@ export default function Row({ data, person = 'pass' }) {
 
   // 2.3 render the card
   return (
-    <Link href={`/requests/${data.id}`}>
+    <Link href={`/offers/${data.id}`}>
       <MainGrid>
         <div style={{ position: 'absolute', top: 20, right: 20 }}>
           {/* <Edit colour="#707070" /> */}

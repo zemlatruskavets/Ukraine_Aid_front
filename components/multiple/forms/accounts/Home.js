@@ -5,7 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import NewAccountForm from './Profile';
 import ViewOffers from 'pages/offers/viewOffers';
 import ViewIndividualRequests from 'components/pages/requests/viewIndividualRequests';
-import { GetUser } from 'graphQL/getUser';
+import { GetUser } from 'graphQL/accounts/getUser';
 
 export default function Home() {
   const user = GetUser();

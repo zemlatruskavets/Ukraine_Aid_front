@@ -28,14 +28,14 @@ import { useQuery } from '@apollo/client';
 import Link from 'next/link';
 
 // graphQL imports
-import { USER_REPORTS_QUERY } from 'graphQL/queries';
-import { GetUser } from 'graphQL/getUser';
+import { USER_REPORTS_QUERY } from 'graphQL/reports/queries';
+import { GetUser } from 'graphQL/accounts/getUser';
 
 // component imports
 import DisplayError from 'components/multiple/general/ErrorMessage';
 import { RedButton } from 'components/single/Buttons';
 import { AddPlus } from 'components/single/svgElements';
-import Row from 'components/multiple/general/Row';
+import Row from 'components/multiple/general/RequestRow';
 
 // style imports
 import {

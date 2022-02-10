@@ -29,7 +29,7 @@
 import { Tabs, TabPanel } from 'react-tabs';
 
 // graphQL imports
-import { GetUser } from 'graphQL/getUser';
+import { GetUser } from 'graphQL/accounts/getUser';
 
 // component imports
 import ViewReports from 'components/pages/reports/ViewReports';

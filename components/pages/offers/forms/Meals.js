@@ -38,14 +38,14 @@ import DisplayError from 'components/multiple/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';
-import { HostOfferFields as StateFields } from 'graphQL/offers/mutations';
+import { MealOfferFields as StateFields } from 'graphql/offers/mutations';
 
 // style imports
 import 'react-datepicker/dist/react-datepicker.css';
 import { MainGrid, Form } from 'styles/components/Form';
 
 // graphQL imports
-import { CREATE_HOSTING_OFFER as MUTATION_STRING } from 'graphQL/offers/mutations';
+import { CREATE_MEAL_OFFER as MUTATION_STRING } from 'graphql/offers/mutations';
 import { ALL_OFFERS_QUERY as REFETCH_STRING } from 'graphQL/offers/queries';
 
 /* 
@@ -55,7 +55,7 @@ import { ALL_OFFERS_QUERY as REFETCH_STRING } from 'graphQL/offers/queries';
 */
 
 // take in the data from the form and then apply the mutation
-export default function HostingOfferForm() {
+export default function MealOfferForm() {
   // 2.1 define the form that handles the state changes
   const { inputs, handleChange, handleDateChange, clearForm } =
     useForm(StateFields);
@@ -80,7 +80,7 @@ export default function HostingOfferForm() {
           alert('Your offer has been successfully added.');
           clearForm();
         }}>
-        <h2> Hosting Offer </h2>
+        <h2> Meal Offer </h2>
         <DisplayError error={error} />
 
         {/* 2.4 define the input fields */}
@@ -96,16 +96,16 @@ export default function HostingOfferForm() {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="date">
+          <label htmlFor="time">
             <DatePicker
               required
-              id="date"
-              name="date"
-              selectsRange
-              selected={inputs.startDate}
-              startDate={inputs.startDate}
-              endDate={inputs.endDate}
-              placeholderText="When is your space available?"
+              id="time"
+              name="time"
+              showTimeSelect
+              dateFormat="MMMM d HH:mm"
+              timeFormat="HH:mm"
+              selected={inputs.time}
+              placeholderText="When should your guests come?"
               onChange={handleDateChange}
             />
           </label>

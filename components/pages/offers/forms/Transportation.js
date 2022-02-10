@@ -38,15 +38,15 @@ import DisplayError from 'components/multiple/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';
-import { TransportationOfferFields as StateFields } from 'data/stateFields';
+import { TransportationOfferFields as StateFields } from 'graphQL/offers/mutations';
 
 // style imports
 import 'react-datepicker/dist/react-datepicker.css';
 import { MainGrid, Form } from 'styles/components/Form';
 
 // graphQL imports
-import { CREATE_TRANSPORT_OFFER as MUTATION_STRING } from 'graphQL/mutations';
-import { ALL_OFFERS_QUERY } from 'graphQL/queries';
+import { CREATE_TRANSPORT_OFFER as MUTATION_STRING } from 'graphQL/offers/mutations';
+import { ALL_OFFERS_QUERY as REFETCH_STRING } from 'graphQL/offers/queries';
 
 /* 
   ---------------------
@@ -63,7 +63,7 @@ export default function TransportationOfferForm() {
   // 2.2 perform the mutation
   const [createMutation, { loading, error }] = useMutation(MUTATION_STRING, {
     variables: inputs,
-    refetchQueries: [{ query: ALL_OFFERS_QUERY }],
+    refetchQueries: [{ query: REFETCH_STRING }],
   });
 
   // define the router
@@ -76,7 +76,8 @@ export default function TransportationOfferForm() {
         onSubmit={async (e) => {
           e.preventDefault();
           await createMutation(); // submit the input fields to the backend
-          router.push('/');
+          router.push('/offers');
+          alert('Your offer has been successfully added.');
           clearForm();
         }}>
         <h2>Transportation Offer</h2>

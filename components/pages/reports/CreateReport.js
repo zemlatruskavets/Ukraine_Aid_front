@@ -39,7 +39,7 @@ import DisplayError from 'components/multiple/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';
-import { WarCrimesReportFields as StateFields } from 'data/stateFields';
+import { WarCrimesReportFields as StateFields } from 'graphQL/reports/mutations';
 
 // style imports
 import 'react-datepicker/dist/react-datepicker.css';
@@ -47,9 +47,9 @@ import { MainGrid, Form } from 'styles/components/Form';
 import { formatOptionLabel, SelectStyles } from 'styles/components/SelectBox';
 
 // graphQL imports
-import { GetAllUsers } from 'graphQL/getUser';
-import { CREATE_WAR_CRIMES_REPORT as MUTATION_STRING } from 'graphQL/mutations';
-import { ALL_OFFERS_QUERY } from 'graphQL/queries';
+import { GetAllUsers } from 'graphQL/accounts/getUser';
+import { CREATE_WAR_CRIMES_REPORT as MUTATION_STRING } from 'graphQL/reports/mutations';
+import { USER_REPORTS_QUERY as REFETCH_STRING } from 'graphQL/reports/queries';
 
 /* 
   ---------------------
@@ -73,7 +73,7 @@ export default function CreateReport() {
   // 2.2 perform the mutation
   const [createMutation, { loading, error }] = useMutation(MUTATION_STRING, {
     variables: inputs,
-    refetchQueries: [{ query: ALL_OFFERS_QUERY }],
+    refetchQueries: [{ query: REFETCH_STRING }],
   });
 
   // define the router
@@ -88,7 +88,7 @@ export default function CreateReport() {
         onSubmit={async (e) => {
           e.preventDefault();
           await createMutation(); // submit the input fields to the backend
-          router.push('/');
+          router.push('/reports');
           alert('Your report has been successfully added.');
           clearForm();
         }}>

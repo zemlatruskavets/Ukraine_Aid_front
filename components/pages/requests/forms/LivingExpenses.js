@@ -38,15 +38,15 @@ import DisplayError from 'components/multiple/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';
-import { LivingExpensesRequestFields as StateFields } from 'data/stateFields';
+import { LivingExpensesRequestFields as StateFields } from 'graphQL/requests/mutations';
 
 // style imports
 import 'react-datepicker/dist/react-datepicker.css';
 import { MainGrid, Form } from 'styles/components/Form';
 
 // graphQL imports
-import { CREATE_LIVING_EXPENSES_REQUEST as MUTATION_STRING } from 'graphQL/mutations';
-import { ALL_OFFERS_QUERY as REFETCH_STRING } from 'graphQL/queries';
+import { CREATE_LIVING_EXPENSES_REQUEST as MUTATION_STRING } from 'graphQL/requests/mutations';
+import { ALL_REQUESTS_QUERY as REFETCH_STRING } from 'graphQL/requests/queries';
 
 /* 
   ---------------------
@@ -76,7 +76,8 @@ export default function LivingExpensesForm() {
         onSubmit={async (e) => {
           e.preventDefault();
           await createMutation(); // submit the input fields to the backend
-          router.push('/');
+          router.push('/requests');
+          alert('Your request has been successfully added.');
           clearForm();
         }}>
         <h2>Living Expenses Request</h2>

@@ -40,7 +40,7 @@ import SelectBox from 'components/multiple/general/SelectBox';
 
 // util imports
 import useForm from 'lib/useForm';
-import { GetUser } from 'graphQL/getUser';
+import { GetUser } from 'graphQL/accounts/getUser';
 import { AccountFields as StateFields } from 'data/stateFields';
 
 // style imports

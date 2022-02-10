@@ -4,8 +4,8 @@ import { useMutation } from '@apollo/client';
 import { Form } from 'styles/components/Form';
 import useForm from 'lib/useForm';
 import Error from 'components/multiple/general/ErrorMessage';
-import { CURRENT_USER_QUERY } from 'graphQL/accountQueries';
-import { SIGNIN_MUTATION } from 'graphQL/mutations';
+import { CURRENT_USER_QUERY } from 'graphQL/accounts/queries';
+import { SIGNIN_MUTATION } from 'graphQL/accounts/mutations';
 
 export default function SignIn() {
   const { inputs, handleChange, resetForm } = useForm({
