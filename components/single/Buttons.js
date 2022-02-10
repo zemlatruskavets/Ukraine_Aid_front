@@ -15,7 +15,7 @@ const RedButton = styled.button`
   padding: 20px 75px;
   background: ${globalVariables.colours.colour2};
   font-family: ${globalVariables.text.bodyText1};
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 40px;
   margin: 2rem auto;
   border: none;
@@ -45,16 +45,16 @@ const NestedButton = styled.button`
     (level === 4 && '#E9836F')};
 
   font-size: ${({ level }) =>
-    (level === 1 && '1.3rem') ||
-    (level === 2 && '1.1rem') ||
-    (level === 3 && '0.9rem') ||
+    (level === 1 && '1.1rem') ||
+    (level === 2 && '0.9rem') ||
+    (level === 3 && '0.8rem') ||
     (level === 4 && '0.7rem')};
 
   width: ${({ level }) =>
-    (level === 1 && '500px') ||
-    (level === 2 && '400px') ||
-    (level === 3 && '350px') ||
-    (level === 4 && '320px')};
+    (level === 1 && '30rem') ||
+    (level === 2 && '25rem') ||
+    (level === 3 && '20rem') ||
+    (level === 4 && '18rem')};
 
   a {
     color: black;

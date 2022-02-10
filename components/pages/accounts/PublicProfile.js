@@ -33,7 +33,7 @@ import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
 
 // component imports
-import DisplayError from 'components/multiple/general/ErrorMessage';
+import DisplayError from 'components/general/ErrorMessage';
 
 // util imports
 

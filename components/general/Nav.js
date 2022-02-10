@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import NavStyles from 'styles/components/Nav';
 import { GetUser } from 'graphQL/accounts/getUser';
-import SignOut from 'components/multiple/forms/accounts/SignOut';
+import SignOut from 'components/pages/accounts/SignOut';
 
 export default function Nav() {
   const user = GetUser();

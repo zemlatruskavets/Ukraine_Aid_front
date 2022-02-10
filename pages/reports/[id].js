@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
-import DisplayError from 'components/multiple/general/ErrorMessage';
+import DisplayError from 'components/general/ErrorMessage';
 
 import { USER_REPORTS_QUERY } from 'graphQL/reports/queries';
 import { UploadPreview } from 'components/single/Images';

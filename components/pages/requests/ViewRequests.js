@@ -30,8 +30,8 @@ import Link from 'next/link';
 import { ALL_REQUESTS_QUERY as QUERY } from 'graphQL/requests/queries';
 
 // component imports
-import DisplayError from 'components/multiple/general/ErrorMessage';
-import Row from 'components/multiple/general/RequestRow';
+import DisplayError from 'components/general/ErrorMessage';
+import Row from 'components/general/RequestRow';
 import { AddPlus } from 'components/single/svgElements';
 import { RedButton } from 'components/single/Buttons';
 

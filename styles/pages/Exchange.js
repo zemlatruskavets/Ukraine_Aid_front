@@ -21,11 +21,11 @@ const MainGrid = styled.div`
 const Title = styled.div`
   grid-area: Title;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: ${globalVariables.text.titleText};
   text-transform: uppercase;
   color: ${globalVariables.colours.colour1};
-  margin: 3rem 0 0 0;
+  margin: 2rem 0 0 0;
 
   h1 {
     font-weight: 300; // not sure why I need to put in this h1 section for it to work
@@ -34,7 +34,7 @@ const Title = styled.div`
   p {
     font-family: ${globalVariables.text.bodyText2};
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: none;
     color: ${globalVariables.text.textColour};
     margin: 0;

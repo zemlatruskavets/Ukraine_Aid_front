@@ -25,7 +25,7 @@
 import Player from 'react-player';
 
 // component imports
-import { Accordion } from 'components/multiple/general/Accordion';
+import { Accordion } from 'components/general/Accordion';
 import accordionData from 'data/informationData';
 
 // style imports

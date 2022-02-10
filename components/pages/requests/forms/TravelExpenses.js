@@ -34,7 +34,7 @@ import { useRouter } from 'next/router';
 import TextareaAutosize from 'react-textarea-autosize';
 
 // component imports
-import DisplayError from 'components/multiple/general/ErrorMessage';
+import DisplayError from 'components/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';

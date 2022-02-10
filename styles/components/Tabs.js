@@ -14,7 +14,7 @@ const StyledTab = styled(Tab)`
   list-style: none;
   padding: 1rem 2rem;
   border-radius: 30px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   font-family: ${globalVariables.text.titleText};
   font-weight: 300;

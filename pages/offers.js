@@ -33,7 +33,7 @@ import { GetUser } from 'graphQL/accounts/getUser';
 
 // component imports
 import ViewOffers from 'components/pages/offers/ViewOffers';
-import ViewIndividualRequests from 'components/pages/requests/viewIndividualRequests';
+import ViewIndividualOffers from 'components/pages/offers/viewIndividualOffers';
 import CreateOffer from 'components/pages/offers/CreateOffer';
 
 // style imports
@@ -45,7 +45,7 @@ import 'react-tabs/style/react-tabs.css';
   2. generate the form
   ---------------------
 */
-export default function RequestsOverview() {
+export default function OffersOverview() {
   // get the current user
   const user = GetUser();
 
@@ -62,7 +62,7 @@ export default function RequestsOverview() {
         <ViewOffers />
       </TabPanel>
       <TabPanel>
-        <ViewIndividualRequests id={user?.id} />
+        <ViewIndividualOffers id={user?.id} />
       </TabPanel>
       <TabPanel>
         <CreateOffer />

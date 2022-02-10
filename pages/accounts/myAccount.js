@@ -1,5 +1,5 @@
-import NewAccountForm from 'components/multiple/forms/accounts/Profile';
-import Home from 'components/multiple/forms/accounts/Home';
+import NewAccountForm from 'components/pages/accounts/Profile';
+import Home from 'components/pages/accounts/Home';
 
 import { MainGrid } from 'styles/pages/Account';
 

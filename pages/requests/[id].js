@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
-import DisplayError from 'components/multiple/general/ErrorMessage';
+import DisplayError from 'components/general/ErrorMessage';
 
 import { SINGLE_REQUEST_QUERY } from 'graphQL/requests/queries';
 import { UploadPreview } from 'components/single/Images';
@@ -25,7 +25,10 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-export default function requestPage(query) {
+export default function requestPage({ query }) {
+  console.log('in here');
+  console.log(query);
+
   // get the request
   const { data, loading, error } = useQuery(SINGLE_REQUEST_QUERY, {
     variables: {

@@ -6,7 +6,7 @@ const NavStyles = styled.ul`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   font-family: ${globalVariables.text.titleText};
   text-transform: uppercase;
@@ -18,7 +18,7 @@ const NavStyles = styled.ul`
     position: relative;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 0.9rem;
     background: none;
     border: 0;
     cursor: pointer;

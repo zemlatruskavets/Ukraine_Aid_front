@@ -12,7 +12,7 @@ const MainGrid = styled.div`
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin: 1rem 0 2rem 0;
   }
 `;

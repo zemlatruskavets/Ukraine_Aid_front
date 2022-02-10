@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
         color: ${globalVariables.text.textColour};
         padding: 0;
         margin: 0;
-        font-size: 1rem;
+        font-size: 0.9rem;
         /* background: url('/Nbackground.jpg');
         background-repeat: no-repeat;
         background-size: 100% 100%; */

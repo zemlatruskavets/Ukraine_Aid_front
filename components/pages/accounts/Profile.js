@@ -35,8 +35,8 @@ import Dropzone from 'react-dropzone-uploader';
 import TextareaAutosize from 'react-textarea-autosize';
 
 // component imports
-import DisplayError from 'components/multiple/general/ErrorMessage';
-import SelectBox from 'components/multiple/general/SelectBox';
+import DisplayError from 'components/general/ErrorMessage';
+import SelectBox from 'components/general/SelectBox';
 
 // util imports
 import useForm from 'lib/useForm';
@@ -70,8 +70,8 @@ import {
 } from 'styles/components/ProfileForm';
 
 // graphQL imports
-import { UPDATE_ACCOUNT as MUTATION_STRING } from 'graphQL/mutations';
-import { ALL_OFFERS_QUERY } from 'graphQL/queries';
+import { UPDATE_ACCOUNT as MUTATION_STRING } from 'graphQL/accounts/mutations';
+import { ALL_USERS_QUERY } from 'graphQL/accounts/queries';
 import { SingleButton } from 'components/single/Buttons';
 
 /* 
@@ -92,7 +92,7 @@ export default function NewAccountForm() {
   // 2.2 perform the mutation
   const [updateMutation, { loading, error }] = useMutation(MUTATION_STRING, {
     variables: inputs,
-    refetchQueries: [{ query: ALL_OFFERS_QUERY }],
+    refetchQueries: [{ query: ALL_USERS_QUERY }],
   });
 
   // define the router

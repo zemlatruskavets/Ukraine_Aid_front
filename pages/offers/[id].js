@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
-import DisplayError from 'components/multiple/general/ErrorMessage';
+import DisplayError from 'components/general/ErrorMessage';
 
 import { SINGLE_OFFER_QUERY } from 'graphQ/offers/queries';
 import { UploadPreview } from 'components/single/Images';
@@ -25,7 +25,7 @@ import {
   Donate,
 } from 'styles/pages/IndividualTransaction';
 
-export default function offerPage(query) {
+export default function offerPage({ query }) {
   // get the offer
   const { data, loading, error } = useQuery(SINGLE_OFFER_QUERY, {
     variables: {

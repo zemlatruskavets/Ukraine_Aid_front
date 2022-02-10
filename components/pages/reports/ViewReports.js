@@ -32,10 +32,10 @@ import { USER_REPORTS_QUERY } from 'graphQL/reports/queries';
 import { GetUser } from 'graphQL/accounts/getUser';
 
 // component imports
-import DisplayError from 'components/multiple/general/ErrorMessage';
+import DisplayError from 'components/general/ErrorMessage';
 import { RedButton } from 'components/single/Buttons';
 import { AddPlus } from 'components/single/svgElements';
-import Row from 'components/multiple/general/RequestRow';
+import Row from 'components/general/RequestRow';
 
 // style imports
 import {

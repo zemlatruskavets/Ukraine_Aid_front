@@ -28,7 +28,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 
 // component imports
-import Header from 'components/multiple/general/Header';
+import Header from 'components/general/Header';
 
 // util imports
 import withData from 'lib/withData';

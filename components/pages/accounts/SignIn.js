@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useMutation } from '@apollo/client';
 import { Form } from 'styles/components/Form';
 import useForm from 'lib/useForm';
-import Error from 'components/multiple/general/ErrorMessage';
+import Error from 'components/general/ErrorMessage';
 import { CURRENT_USER_QUERY } from 'graphQL/accounts/queries';
 import { SIGNIN_MUTATION } from 'graphQL/accounts/mutations';
 

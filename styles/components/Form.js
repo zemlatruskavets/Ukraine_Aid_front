@@ -20,7 +20,7 @@ const Form = styled.form`
   align-items: center;
   background: ${globalVariables.colours.divBackground};
   border-radius: 4rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   box-shadow: 0 0 10px lightgrey;
   line-height: 2;
   justify-items: center;
@@ -31,7 +31,7 @@ const Form = styled.form`
     font-weight: 300;
     color: ${globalVariables.colours.colour1};
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.5;
     margin: 1rem 0;
     padding: 0;
@@ -48,7 +48,7 @@ const Form = styled.form`
     width: 100%;
     padding: 1rem;
     text-indent: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: ${globalVariables.colours.background};
     box-shadow: 0 0 5px lightgrey;
     font-family: ${globalVariables.text.bodyText2};
@@ -71,7 +71,7 @@ const Form = styled.form`
     color: #707070;
     border: none;
     margin: 1rem 0 0 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     padding: 1rem 2rem;
     cursor: pointer;
@@ -99,7 +99,7 @@ const MinimalistForm = styled.form`
   align-items: center;
   width: 100%;
   padding: 100px 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2;
   justify-items: center;
 
@@ -112,7 +112,7 @@ const MinimalistForm = styled.form`
   select {
     padding: 1rem;
     text-indent: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: ${globalVariables.colours.background};
     font-family: ${globalVariables.text.bodyText2};
     font-style: italic;
@@ -133,7 +133,7 @@ const MinimalistForm = styled.form`
     box-shadow: 0 0 10px lightgrey;
     color: #707070;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     padding: 1rem 2rem;
     cursor: pointer;

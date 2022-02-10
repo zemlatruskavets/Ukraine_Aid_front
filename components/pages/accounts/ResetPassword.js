@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 import { Form } from 'styles/components/Form';
 import useForm from 'lib/useForm';
-import Error from 'components/multiple/general/ErrorMessage';
+import Error from 'components/general/ErrorMessage';
 import { RESET_MUTATION } from 'graphQL/accounts/mutations';
 
 export default function Reset({ token }) {
