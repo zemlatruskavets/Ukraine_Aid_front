@@ -38,14 +38,14 @@ import DisplayError from 'components/general/ErrorMessage';
 
 // util imports
 import useForm from 'lib/useForm';
-import { MealOfferFields as StateFields } from 'graphql/offers/mutations';
+import { MealOfferFields as StateFields } from 'graphQL/offers/mutations';
 
 // style imports
 import 'react-datepicker/dist/react-datepicker.css';
 import { MainGrid, Form } from 'styles/components/Form';
 
 // graphQL imports
-import { CREATE_MEAL_OFFER as MUTATION_STRING } from 'graphql/offers/mutations';
+import { CREATE_MEAL_OFFER as MUTATION_STRING } from 'graphQL/offers/mutations';
 import { ALL_OFFERS_QUERY as REFETCH_STRING } from 'graphQL/offers/queries';
 
 /* 
