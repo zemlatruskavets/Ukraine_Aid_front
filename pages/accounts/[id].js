@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import Modal from 'react-modal';
 import { ModalStyles } from 'styles/components/Modal';
-import PublicProfile from 'components/multiple/forms/accounts/PublicProfile';
+import PublicProfile from 'components/pages/accounts/PublicProfile';
 
 const requestPage = ({ query }) => {
   return (
