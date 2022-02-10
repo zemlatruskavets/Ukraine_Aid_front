@@ -5,6 +5,8 @@ import 'react-tabs/style/react-tabs.css';
 import NewAccountForm from './Profile';
 import ViewOffers from 'pages/offers/viewOffers';
 import ViewIndividualRequests from 'components/pages/requests/viewIndividualRequests';
+import ViewIndividualOffers from '../offers/viewIndividualOffers';
+
 import { GetUser } from 'graphQL/accounts/getUser';
 
 export default function Home() {
@@ -22,7 +24,7 @@ export default function Home() {
         <NewAccountForm />
       </TabPanel>
       <TabPanel>
-        <ViewOffers />
+        <ViewIndividualOffers id={user?.id} />
       </TabPanel>
       <TabPanel>
         <ViewIndividualRequests id={user?.id} />

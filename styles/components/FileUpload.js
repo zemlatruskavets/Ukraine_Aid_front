@@ -39,6 +39,7 @@ const DropZoneStyles = {
           color: globalVariables.text.textColour,
           fontFamily: globalVariables.text.bodyText2,
           fontWeight: '300',
+          fontSize: '1.2rem',
           fontStyle: 'italic',
           margin: '0 3rem',
         },

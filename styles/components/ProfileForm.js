@@ -20,7 +20,7 @@ const FormContainer = styled.div`
   justify-self: center;
   align-items: center;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2;
   justify-items: center;
   grid-template-areas:
@@ -40,7 +40,7 @@ const FormContainer = styled.div`
   textarea,
   select {
     padding: 1rem 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: transparent;
     font-family: ${globalVariables.text.bodyText2};
     font-style: italic;
@@ -100,7 +100,7 @@ const Photo = styled.div`
 
 const PhotoName = styled.div`
   grid-area: PhotoName;
-  font-size: 2rem;
+  font-size: 1.6rem;
 `;
 const Social = styled.div`
   grid-area: Social;
