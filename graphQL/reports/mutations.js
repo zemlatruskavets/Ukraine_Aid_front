@@ -20,6 +20,7 @@ const WarCrimesReportFields = {
 const CREATE_WAR_CRIMES_REPORT = gql`
   mutation CREATE_WAR_CRIMES_REPORT(
     # variables and types
+    $category: String!
     $title: String!
     $location: String!
     $time: String!
@@ -30,6 +31,7 @@ const CREATE_WAR_CRIMES_REPORT = gql`
   ) {
     createCrime(
       data: {
+        category: $category
         title: $title
         location: $location
         time: $time

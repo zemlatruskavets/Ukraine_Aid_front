@@ -62,6 +62,8 @@ export default function reportPage({ query }) {
           <Subtitle>
             <p>{Crime.location}</p>
             <p>{moment(Crime.time).format('LLL')}</p>
+            <h2>to do: display witnesses</h2>
+            <h2>to do: display photos</h2>
           </Subtitle>
           <Message>{Crime.description && <p>{Crime.description}</p>}</Message>
           <Donate>
