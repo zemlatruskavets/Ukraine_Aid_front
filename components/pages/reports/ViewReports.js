@@ -35,7 +35,7 @@ import { GetUser } from 'graphQL/accounts/getUser';
 import DisplayError from 'components/general/ErrorMessage';
 import { RedButton } from 'components/single/Buttons';
 import { AddPlus } from 'components/single/svgElements';
-import Row from 'components/general/RequestRow';
+import Row from 'components/general/CrimeRow';
 
 // style imports
 import {

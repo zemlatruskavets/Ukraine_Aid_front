@@ -35,6 +35,9 @@ const SINGLE_OFFER_QUERY = gql`
       category
       travelOrigin
       travelDestination
+      startDate
+      endDate
+      time
       hostLocation
       amount
       message
@@ -78,6 +81,8 @@ const SINGLE_USER_OFFER_AND_INFO = gql`
         category
         travelOrigin
         travelDestination
+        startDate
+        endDate
         hostLocation
         amount
         message

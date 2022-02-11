@@ -37,7 +37,10 @@ const SINGLE_REQUEST_QUERY = gql`
       category
       travelOrigin
       travelDestination
+      time
       hostLocation
+      startDate
+      endDate
       amount
       message
       numberPeople

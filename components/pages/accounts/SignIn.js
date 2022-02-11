@@ -20,9 +20,7 @@ export default function SignIn() {
   const router = useRouter();
   async function handleSubmit(e) {
     e.preventDefault(); // stop the form from submitting
-    console.log(inputs);
     const res = await signin();
-    console.log(res);
     resetForm();
     router.push('/');
     // Send the email and password to the graphqlAPI

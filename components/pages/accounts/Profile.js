@@ -84,7 +84,6 @@ import { SingleButton } from 'components/single/Buttons';
 export default function NewAccountForm() {
   // get the current user
   const user = GetUser();
-  console.log(user);
 
   // 2.1 define the logic that handles the state changes
   const { inputs, handleChange, clearForm } = useForm(user);
@@ -101,7 +100,6 @@ export default function NewAccountForm() {
   // Return the current status of files being uploaded
   const handleChangeStatus = ({ meta, file }, status) => {
     if (status === 'done') {
-      console.log(file);
       handleChange(event, file);
     }
   };
