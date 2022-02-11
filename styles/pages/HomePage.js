@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import globalVariables from 'styles/general/globalVariables';
+import { device } from 'styles/general/Screens';
 
 const MainGrid = styled.div`
   display: grid;

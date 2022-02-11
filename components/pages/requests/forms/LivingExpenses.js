@@ -131,6 +131,17 @@ export default function LivingExpensesForm() {
               onChange={handleChange}
             />
           </label>
+          <label htmlFor="transferLink">
+            <input
+              required
+              type="text"
+              id="transferLink"
+              name="transferLink"
+              placeholder="Where should the money be sent?"
+              value={inputs.transferLink}
+              onChange={handleChange}
+            />
+          </label>
           <label htmlFor="message">
             <TextareaAutosize
               required

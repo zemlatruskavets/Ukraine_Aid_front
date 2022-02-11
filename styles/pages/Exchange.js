@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import globalVariables from 'styles/general/globalVariables';
+import { device } from 'styles/general/Screens';
 
 const MainGrid = styled.div`
   display: grid;
@@ -8,14 +9,39 @@ const MainGrid = styled.div`
   grid-auto-rows: 1fr fit-content;
   justify-content: center;
   text-align: center;
-  grid-template-areas:
-    '. . . . . .'
-    '. . Title Title . .'
-    '. . Filter Filter . .'
-    '. . Exchanges Exchanges . .'
-    '. . Exchanges Exchanges . .'
-    '. . Exchanges Exchanges . .'
-    '. . . . . .';
+
+  @media ${device.mobileS} {
+    grid-template-areas:
+      '. . . . . .'
+      'Title Title Title Title Title Title'
+      'Filter Filter Filter Filter Filter Filter'
+      'Exchanges Exchanges Exchanges Exchanges Exchanges Exchanges'
+      'Exchanges Exchanges Exchanges Exchanges Exchanges Exchanges'
+      'Exchanges Exchanges Exchanges Exchanges Exchanges Exchanges'
+      '. . . . . .';
+  }
+
+  @media ${device.mobileM} {
+    grid-template-areas:
+      '. . . . . .'
+      '. Title Title Title Title .'
+      '. Filter Filter Filter Filter .'
+      '. Exchanges Exchanges Exchanges Exchanges .'
+      '. Exchanges Exchanges Exchanges Exchanges .'
+      '. Exchanges Exchanges Exchanges Exchanges .'
+      '. . . . . .';
+  }
+
+  @media ${device.laptop} {
+    grid-template-areas:
+      '. . . . . .'
+      '. . Title Title . .'
+      '. . Filter Filter . .'
+      '. . Exchanges Exchanges . .'
+      '. . Exchanges Exchanges . .'
+      '. . Exchanges Exchanges . .'
+      '. . . . . .';
+  }
 `;
 
 const Title = styled.div`
