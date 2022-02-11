@@ -7,34 +7,38 @@ const MainGrid = styled.div`
   grid-template-areas: ' . . . . Form Form Form Form . . . .';
   grid-template-rows: 1fr fit-content;
   justify-content: center;
-  padding: 10px;
+  align-content: center;
+  text-align: center;
+  padding: 1rem;
 `;
 
 const Form = styled.form`
   display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem 1rem 3rem 1rem;
   grid-area: Form;
   justify-content: center;
   justify-self: center;
   align-items: center;
   background: ${globalVariables.colours.divBackground};
-  border-radius: 4rem;
+  border-radius: 3rem;
   font-size: 1.2rem;
   box-shadow: 0 0 10px lightgrey;
   line-height: 2;
   justify-items: center;
-  margin: 5rem 0 10rem 0;
+  margin: 3rem 0 5rem 0;
 
   h2 {
     font-family: ${globalVariables.text.titleText};
     font-weight: 300;
     color: ${globalVariables.colours.colour1};
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1.5;
     margin: 1rem 0;
     padding: 0;
+    width: 80%;
   }
 
   label {
@@ -45,8 +49,8 @@ const Form = styled.form`
   input,
   textarea,
   select {
-    width: 100%;
-    padding: 1rem;
+    width: 80%;
+    padding: 0.8rem 0;
     text-indent: 1rem;
     font-size: 0.9rem;
     background: ${globalVariables.colours.background};
@@ -54,11 +58,9 @@ const Form = styled.form`
     font-family: ${globalVariables.text.bodyText2};
     border: none;
     resize: none;
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 2rem;
     &:focus {
       outline: 0;
-      border-color: pink;
     }
   }
   button,
