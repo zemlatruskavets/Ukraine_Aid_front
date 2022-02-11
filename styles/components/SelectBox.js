@@ -22,7 +22,10 @@ const formatOptionLabel = ({ firstName, lastName, email, profilePhoto }) => {
 const SelectStyles = {
   container: (base) => ({
     ...base,
+    display: 'flex',
     maxWidth: '500px',
+    justifyContent: 'center',
+    alignItems: 'center',
   }),
   control: ({ width, ...css }) => ({
     ...css,
@@ -33,6 +36,7 @@ const SelectStyles = {
     textIndent: '1rem',
     textAlign: 'left',
     boxShadow: '0 0 5px lightgrey',
+    width: '80%',
   }),
 
   // this controls the style of the background input form
@@ -40,7 +44,7 @@ const SelectStyles = {
     ...provided,
     height: 'auto',
     padding: '0 6px',
-    width: '100%',
+    width: '80%',
     boxShadow: 'none',
   }),
 

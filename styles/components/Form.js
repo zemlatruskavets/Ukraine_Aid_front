@@ -56,6 +56,7 @@ const Form = styled.form`
     background: ${globalVariables.colours.background};
     box-shadow: 0 0 5px lightgrey;
     font-family: ${globalVariables.text.bodyText2};
+    font-style: italic;
     border: none;
     resize: none;
     border-radius: 2rem;
