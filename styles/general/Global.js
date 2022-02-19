@@ -6,15 +6,6 @@ const GlobalStyles = createGlobalStyle`
     --bs: '0 10px 20px 0 ${globalVariables.colours.background}';
     --highlightColour: ${globalVariables.colours.colour1};
     }
-
-    @font-face {
-        font-family: 'Egyptian';
-        src: url('./fonts/Egyptian.ttf');
-    }
-    @font-face {
-        font-family: 'Adventure';
-        src: url('./fonts/Adventure.ttf');
-    }
 }
 
     body{
