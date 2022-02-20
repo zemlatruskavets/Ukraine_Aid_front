@@ -47,7 +47,8 @@ import 'react-tabs/style/react-tabs.css';
 */
 export default function OffersOverview() {
   // get the current user
-  const user = GetUser();
+  // const user = GetUser();
+  const userID = '62057ecddb1cdc6960dfca18';
 
   // render each component in a separate tab
   return (
@@ -62,7 +63,7 @@ export default function OffersOverview() {
         <ViewOffers />
       </TabPanel>
       <TabPanel>
-        <ViewIndividualOffers id={user?.id} />
+        <ViewIndividualOffers id={userID} />
       </TabPanel>
       <TabPanel>
         <CreateOffer />

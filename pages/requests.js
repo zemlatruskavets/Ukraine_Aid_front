@@ -48,6 +48,7 @@ import 'react-tabs/style/react-tabs.css';
 export default function RequestsOverview() {
   // get the current user
   const user = GetUser();
+  const userID = '62057ecddb1cdc6960dfca18';
 
   // render each component in a separate tab
   return (
@@ -62,7 +63,7 @@ export default function RequestsOverview() {
         <ViewRequests />
       </TabPanel>
       <TabPanel>
-        <ViewIndividualRequests id={user?.id} />
+        <ViewIndividualRequests id={userID} />
       </TabPanel>
       <TabPanel>
         <CreateRequest />
