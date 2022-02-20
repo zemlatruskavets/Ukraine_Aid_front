@@ -54,7 +54,8 @@ import {
 export default function ViewReports() {
   // load the data
   const user = GetUser();
-  const id = user?.id;
+  // const id = user?.id;
+  const id = '62057ecddb1cdc6960dfca18';
   const { data, error, loading } = useQuery(USER_REPORTS_QUERY, {
     variables: { id },
   });

@@ -18,9 +18,13 @@ export default function Nav() {
       )}
       {!user && (
         <>
-          <Link href="/information">Information</Link>
+          <Link href="/offers">Offers</Link>
+          <Link href="/requests">Requests</Link>
+          <Link href="/reports">Reports</Link>
+          <Link href="/accounts/myAccount">My Account</Link>
+          {/* <Link href="/information">Information</Link>
           <Link href="/accounts/signUp">Register</Link>
-          <Link href="/accounts/signIn">Sign In</Link>
+          <Link href="/accounts/signIn">Sign In</Link> */}
         </>
       )}
     </NavStyles>
